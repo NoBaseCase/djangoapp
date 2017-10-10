@@ -2,7 +2,8 @@
 <ul>
 	<h3>List of Avaliable Albums: <br></h3>
 	{% for album in all_albums %}
-	<li><a href="/music/{{ album.id }}">{{ album.album_title }}</a></li>
+	<!-- dynamic url -->
+	<li><a href="{% url 'detail' album.id %}">{{ album.album_title }}</a></li>
 	{% endfor %}
 </ul>
 {% else %}
